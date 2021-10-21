@@ -1,0 +1,20 @@
+pipeline {
+ agent any
+ stages {
+  stage ('Compile project') {
+   steps {
+        bat "mvn compile"
+   }
+  }
+  stage ('Test the project') {
+   steps {
+        bat "mvn test"
+   }
+  }
+  stage ('Package the project') {
+   steps {
+        bat "mvn package"
+   }
+  }
+}
+}
