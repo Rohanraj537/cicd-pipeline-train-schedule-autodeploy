@@ -15,6 +15,7 @@ pipeline {
         stage('Build Docker Image') {
             when {
                 branch 'master'
+                sh 'echo When Loop!'
             }
             steps {
                 script {
